@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Tugas Mengelola Array</h1>
+
+    <h2>1. Mengurutkan</h2>
+    <h4>Data</h4>
+    <p>Angka: [20, 10, 3, 30, 58, 42, 6, 9]</p>
+    <p>Huruf: [z, a, c, g, p]</p>
+    <h4>Hasil</h4>
+    <p id="result1"></p>
+    <p id="result2"></p><br>
+
+    <h2>2. Memfilter Angka Genap</h2>
+    <h4>Data</h4>
+    <p>Angka: [1, 2, 3, 4, 5, 6, 7, 8, 9]</p>
+    <h4>Hasil</h4>
+    <p id="result3"></p><br>
+
+    <h2>Cek Angka Genap</h2>
+    <h4>Data</h4>
+    <p>Angka: [1, 2, 3, 4, 5, 6, 7, 8, 9]</p>
+    <h4>Hasil</h4>
+    <p id="result4"></p>
+
+    <script>
+        const angka1 = [20, 10, 3, 30, 58, 42, 6, 9];
+        const huruf1 = ['z', 'a', 'c', 'g', 'p'];
+
+        const sortedAngka = angka1.sort((a, b) => a - b);
+        const sortedHuruf = huruf1.sort();
+
+        document.getElementById('result1').innerHTML = "Angka Terurut: " + sortedAngka;
+        document.getElementById('result2').innerHTML = "Huruf Terurut: " + sortedHuruf;
+
+        const angka2 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+        const evenNumbers = angka2.filter(num => num % 2 === 0);
+
+        document.getElementById('result3').innerHTML = "Angka Genap: " + evenNumbers;
+
+        const angka3 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+        const isEvenArray = angka3.map(num => num % 2 === 0);
+
+        document.getElementById('result4').innerHTML = "Cek Genap: " + isEvenArray;
+    </script>
+</body>
+</html>
